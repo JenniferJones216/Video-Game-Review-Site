@@ -11,5 +11,7 @@ namespace ReviewsSite.Models
         public double Rating { get; set; }
         public string Usercomment { get; set; }
         public string Username { get; set; }
+        public int VideoGameId { get; set; }
+        public virtual VideoGame VideoGame { get; set; }
     }
 }

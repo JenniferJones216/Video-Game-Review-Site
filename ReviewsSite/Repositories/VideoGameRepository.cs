@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ReviewsSite.Repositories
 {
-    public class VideoGameRepository : IRepository<VideoGame>
+    public class VideoGameRepository
     {
 
     }

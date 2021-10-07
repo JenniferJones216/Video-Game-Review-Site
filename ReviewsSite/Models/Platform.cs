@@ -9,5 +9,7 @@ namespace ReviewsSite.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
+
+        public virtual List<VideoGamePlatform> VideoGames { get; set; }
     }
 }
