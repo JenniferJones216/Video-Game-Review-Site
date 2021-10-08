@@ -6,36 +6,37 @@ using System.Threading.Tasks;
 
 namespace ReviewsSite.Repositories
 {
-    public class VideoGameRepository : IRepository<VideoGame>
+    public class ReviewRepository : IRepository<Review>
     {
         public VideoGameContext db;
-
-        public VideoGameRepository(VideoGameContext db)
+        
+        public ReviewRepository(VideoGameContext db)
         {
             this.db = db;
         }
+        
 
-        public void Create(VideoGame obj)
+        public void Create(Review obj)
         {
             throw new NotImplementedException();
         }
 
-        public void Delete(VideoGame obj)
+        public void Delete(Review obj)
         {
             throw new NotImplementedException();
         }
 
-        public VideoGame GetByID(int id)
+        public Review GetByID(int id)
         {
-            return db.VideoGames.Where(r => r.Id == id).FirstOrDefault();
+            return db.Reviews.Where(r => r.Id == id).FirstOrDefault();
         }
 
-        public IEnumerable<VideoGame> GetAll()
+        public IEnumerable<Review> GetAll()
         {
-            return db.VideoGames.ToList();
+            return db.Reviews.ToList();
         }
 
-        public void Update(VideoGame obj)
+        public void Update(Review obj)
         {
             throw new NotImplementedException();
         }

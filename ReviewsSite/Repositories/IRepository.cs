@@ -12,7 +12,7 @@ namespace ReviewsSite.Repositories
 
         //r
         IEnumerable<T> GetAll();
-        T GebByID(int id);
+        T GetByID(int id);
         //u
         void Update(T obj);
         //d 

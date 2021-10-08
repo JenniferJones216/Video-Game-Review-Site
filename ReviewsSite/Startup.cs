@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using ReviewsSite.Models;
+using ReviewsSite.Repositories;
 
 namespace ReviewsSite
 {
@@ -18,6 +20,8 @@ namespace ReviewsSite
             Configuration = configuration;
         }
 
+        
+
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -26,6 +30,10 @@ namespace ReviewsSite
         {
             services.AddMvc();
             services.AddDbContext<VideoGameContext>();
+            services.AddScoped<IRepository<VideoGame>, VideoGameRepository>();
+            services.AddScoped<IRepository<Platform>, PlatformRepository>();
+            services.AddScoped<IRepository<Review>, ReviewRepository>();
+            services.AddScoped<IRepository<VideoGamePlatform>, VideoGamePlatformRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
