@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using ReviewsSite.Models;
+using ReviewsSite.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,9 +10,23 @@ namespace ReviewsSite.Controllers
 {
     public class ReviewController : Controller
     {
-        public IActionResult Index()
+        public IRepository<Review> reviewRepo;
+
+        public ReviewController(IRepository<Review> reviewRepo)
         {
-            return View();
+            this.reviewRepo = reviewRepo;
         }
+        public ViewResult Index()
+        {
+            return View(reviewRepo.GetAll());
+        }
+        public ViewResult Details(int id)
+        {
+            return View(reviewRepo.GetByID(id));
+        }
+        //public IActionResult Index()
+        //{
+        //    return View();
+        //}
     }
 }

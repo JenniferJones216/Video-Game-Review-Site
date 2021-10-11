@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using ReviewsSite.Models;
+using ReviewsSite.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,10 +10,22 @@ namespace ReviewsSite.Controllers
 {
     public class VideoGameController : Controller
     {
-
-        public IActionResult Index()
+        public IRepository<VideoGame> videoGameRepo;
+        public VideoGameController(IRepository<VideoGame> videoGameRepo)
         {
-            return View();
+            this.videoGameRepo = videoGameRepo;
         }
+        public ViewResult Index()
+        {
+            return View(videoGameRepo.GetAll());
+        }
+        public ViewResult Details(int id)
+        {
+            return View(videoGameRepo.GetByID(id));
+        }
+        //public IActionResult Index()
+        //{
+        //    return View();
+        //}
     }
 }

@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis;
+using ReviewsSite.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,15 +10,27 @@ namespace ReviewsSite.Controllers
 {
     public class PlatformController : Controller
     {
+        public IRepository<Platform> platformRepo;
+        public PlatformController(IRepository<Platform> platformRepo)
+        {
+            this.platformRepo = platformRepo;
+        }
         public VideoGameContext db;
-        public PlatformController (VideoGameContext db)
+        public PlatformController(VideoGameContext db)
         {
            this.db = db;
         }
-
-        public IActionResult Index()
+        public ViewResult Index()
         {
-            return View(db.Platforms.ToList());
+            return View(platformRepo.GetAll());
         }
+        public ViewResult Details(int id)
+        {
+            return View(platformRepo.GetByID(id));
+        }
+        //public IActionResult Index()
+        // {
+        //    return View(db.Platforms.ToList());
+        // }
     }
 }
