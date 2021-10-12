@@ -24,10 +24,10 @@ namespace ReviewsSite
         {
             // the platform table HAS this data already in it
             modelBuilder.Entity<Platform>().HasData(
-                new Platform() {Id = 1, Name = "PC"},
-                new Platform() {Id = 2, Name = "Xbox"},
-                new Platform() {Id = 3, Name = "PS4"},
-                new Platform() {Id = 4, Name = "Switch"}
+                new Platform() { Id = 1, Name = "PC" },
+                new Platform() { Id = 2, Name = "Xbox" },
+                new Platform() { Id = 3, Name = "PS4" },
+                new Platform() { Id = 4, Name = "Switch" }
                 );
 
             //Video Game Seed Data; DOES NOT INCLUDE platforms or reviews
@@ -38,8 +38,15 @@ namespace ReviewsSite
             new VideoGame() { Id = 4, Name = "The Talos Principle", ReleaseDate = "11 December 2014", Description = "The Talos Principle is a narrative-based puzzle game, played from a first- or third-person perspective. The player takes the role of a robot with a seemingly human consciousness as they explore a number of environments that include over 120 puzzles. These environments interlock greenery, desert, and stone ruins with futuristic technology.", PictureURL = "https://upload.wikimedia.org/wikipedia/en/thumb/a/ac/The_Talos_Principle.jpg/220px-The_Talos_Principle.jpg", VideoURL = "https://www.youtube.com/watch?v=iAVh4_wnOIw" },
             new VideoGame() { Id = 5, Name = "The Elder Scrolls V: Skyrim", ReleaseDate = "11 November 2011", Description = "This famed open-world action role-playing game takes place in the titular Skyrim province of Tamriel. The game's main story revolves around the player's character, the Dragonborn, on their quest to defeat Alduin the World-Eater, a dragon who is prophesied to destroy the world.", PictureURL = "https://upload.wikimedia.org/wikipedia/en/thumb/1/15/The_Elder_Scrolls_V_Skyrim_cover.png/220px-The_Elder_Scrolls_V_Skyrim_cover.png", VideoURL = "https://www.youtube.com/watch?v=JSRtYpNRoN0" }
                 );
-
+            modelBuilder.Entity<VideoGame>().HasData(
+                new Review() { Id = 1, Rating = 4.2, Username = "AweSome495", Usercomment = "I don't think there are many,if any, other games where you can play as a communist,schizophrenic,disco,cop." },
+                new Review() { Id = 2, Rating = 4.5, Username = "SINA - VF - 02", Usercomment = "let's just say i finished this game in every way possible & i'm about to play it again on pc" },
+                new Review() { Id = 3, Rating = 3.8, Username = "Barack Obama", Usercomment = "there was no cake :((((((((((((((((((((((((((((((((((((" },
+                new Review() { Id = 4, Rating = 4.5, Username = "J. Jonah. Jameson", Usercomment = "I wish I could erase my memory and play this game again." },
+                new Review() { Id = 5, Rating = 5, Username = "1Jhovany", Usercomment = "Best game to ever be ceated, must play, starting off almost getting ur head chopped off to then have guards distracted by a fu@!*ng dragon, then go on to become the dragon born and go on so many amazing quest into this huge open world map w DLC's of vampires its just, perfection" }
+                );
         }
+
 
     }
 }
