@@ -17,7 +17,8 @@ namespace ReviewsSite.Repositories
 
         public void Create(VideoGame obj)
         {
-            throw new NotImplementedException();
+            db.VideoGames.Add(obj);
+            db.SaveChanges();
         }
 
         public void Delete(VideoGame obj)
