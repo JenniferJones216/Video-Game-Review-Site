@@ -43,7 +43,7 @@ namespace ReviewsSite
                 new Review() { Id = 2, Rating = 4.5, Username = "SINA - VF - 02", Usercomment = "let's just say i finished this game in every way possible & i'm about to play it again on pc" },
                 new Review() { Id = 3, Rating = 3.8, Username = "Barack Obama", Usercomment = "there was no cake :((((((((((((((((((((((((((((((((((((" },
                 new Review() { Id = 4, Rating = 4.5, Username = "J. Jonah. Jameson", Usercomment = "I wish I could erase my memory and play this game again." },
-                new Review() { Id = 5, Rating = 5, Username = "1Jhovany", Usercomment = "Best game to ever be ceated, must play, starting off almost getting ur head chopped off to then have guards distracted by a fu@!*ng dragon, then go on to become the dragon born and go on so many amazing quest into this huge open world map w DLC's of vampires its just, perfection" }
+                new Review() { Id = 5, Rating = 5, Username = "1Jhovany", Usercomment = "Best game to ever be created, must play, starting off almost getting ur head chopped off to then have guards distracted by a fu@!*ng dragon, then go on to become the dragon born and go on so many amazing quest and side quest into this huge open world map w DLC's of vampires its just, PERFECTION!!" }
                 );
         }
 
