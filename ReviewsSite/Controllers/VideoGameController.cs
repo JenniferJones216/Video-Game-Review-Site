@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace ReviewsSite.Controllers
 {
+    // This may become obsolete *********************************************************************
     public class VideoGameController : Controller
     {
         public IRepository<VideoGame> videoGameRepo;
@@ -23,9 +24,9 @@ namespace ReviewsSite.Controllers
         {
             return View(videoGameRepo.GetByID(id));
         }
-        //public IActionResult Index()
-        //{
-        //    return View();
-        //}
+        public IActionResult Create()
+        {
+            return View(new VideoGame());
+        }
     }
 }
