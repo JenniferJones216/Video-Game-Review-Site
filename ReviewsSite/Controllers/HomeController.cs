@@ -8,9 +8,15 @@ namespace ReviewsSite.Properties.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        private VideoGameContext db;
+        public HomeController (VideoGameContext db)
         {
-            return View();
+            this.db = db;
+        }
+
+    public IActionResult Index()
+        {
+            return View(db.VideoGames.ToList());
         }
     }
 }
