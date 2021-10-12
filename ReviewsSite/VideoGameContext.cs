@@ -38,15 +38,24 @@ namespace ReviewsSite
             new VideoGame() { Id = 4, Name = "The Talos Principle", ReleaseDate = "11 December 2014", Description = "The Talos Principle is a narrative-based puzzle game, played from a first- or third-person perspective. The player takes the role of a robot with a seemingly human consciousness as they explore a number of environments that include over 120 puzzles. These environments interlock greenery, desert, and stone ruins with futuristic technology.", PictureURL = "https://upload.wikimedia.org/wikipedia/en/thumb/a/ac/The_Talos_Principle.jpg/220px-The_Talos_Principle.jpg", VideoURL = "https://www.youtube.com/watch?v=iAVh4_wnOIw" },
             new VideoGame() { Id = 5, Name = "The Elder Scrolls V: Skyrim", ReleaseDate = "11 November 2011", Description = "This famed open-world action role-playing game takes place in the titular Skyrim province of Tamriel. The game's main story revolves around the player's character, the Dragonborn, on their quest to defeat Alduin the World-Eater, a dragon who is prophesied to destroy the world.", PictureURL = "https://upload.wikimedia.org/wikipedia/en/thumb/1/15/The_Elder_Scrolls_V_Skyrim_cover.png/220px-The_Elder_Scrolls_V_Skyrim_cover.png", VideoURL = "https://www.youtube.com/watch?v=JSRtYpNRoN0" }
                 );
-            modelBuilder.Entity<VideoGame>().HasData(
-                new Review() { Id = 1, Rating = 4.2, Username = "AweSome495", Usercomment = "I don't think there are many,if any, other games where you can play as a communist,schizophrenic,disco,cop." },
-                new Review() { Id = 2, Rating = 4.5, Username = "SINA - VF - 02", Usercomment = "let's just say i finished this game in every way possible & i'm about to play it again on pc" },
-                new Review() { Id = 3, Rating = 3.8, Username = "Barack Obama", Usercomment = "there was no cake :((((((((((((((((((((((((((((((((((((" },
-                new Review() { Id = 4, Rating = 4.5, Username = "J. Jonah. Jameson", Usercomment = "I wish I could erase my memory and play this game again." },
-                new Review() { Id = 5, Rating = 5, Username = "1Jhovany", Usercomment = "Best game to ever be created, must play, starting off almost getting ur head chopped off to then have guards distracted by a fu@!*ng dragon, then go on to become the dragon born and go on so many amazing quest and side quest into this huge open world map w DLC's of vampires its just, PERFECTION!!" }
-                );
-        }
+            modelBuilder.Entity<Review>().HasData(
+                new Review() { Id = 1, Rating = 4.2, Username = "AweSome495", Usercomment = "I don't think there are many,if any, other games where you can play as a communist,schizophrenic,disco,cop.", VideoGameId = 1 },
+                new Review() { Id = 2, Rating = 4.5, Username = "SINA - VF - 02", Usercomment = "let's just say i finished this game in every way possible & i'm about to play it again on pc", VideoGameId = 2 },
+                new Review() { Id = 3, Rating = 3.8, Username = "Barack Obama", Usercomment = "there was no cake :((((((((((((((((((((((((((((((((((((", VideoGameId = 3 },
+                new Review() { Id = 4, Rating = 4.5, Username = "J. Jonah. Jameson", Usercomment = "I wish I could erase my memory and play this game again.", VideoGameId = 4 },
+                new Review() { Id = 5, Rating = 5, Username = "1Jhovany", Usercomment = "Best game to ever be created, must play, starting off almost getting ur head chopped off to then have guards distracted by a fu@!*ng dragon, then go on to become the dragon born and go on so many amazing quest and side quest into this huge open world map w DLC's of vampires its just, PERFECTION!!", VideoGameId = 5 }
+               );
 
+            modelBuilder.Entity<VideoGamePlatform>().HasData(
+               new VideoGamePlatform() { Id = 1, PlatformId = 1, VideoGameId = 1 },
+               new VideoGamePlatform() { Id = 2, PlatformId = 2, VideoGameId = 2 },
+               new VideoGamePlatform() { Id = 3, PlatformId = 4, VideoGameId = 3 },
+               new VideoGamePlatform() { Id = 4, PlatformId = 4, VideoGameId = 4 },
+               new VideoGamePlatform() { Id = 5, PlatformId = 1, VideoGameId = 5 },
+               new VideoGamePlatform() { Id = 5, PlatformId = 2, VideoGameId = 5 },
+               new VideoGamePlatform() { Id = 5, PlatformId = 3, VideoGameId = 5 }
+               );
+        }
 
     }
 }
