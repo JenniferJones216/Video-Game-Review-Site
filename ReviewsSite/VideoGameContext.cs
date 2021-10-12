@@ -52,8 +52,8 @@ namespace ReviewsSite
                new VideoGamePlatform() { Id = 3, PlatformId = 4, VideoGameId = 3 },
                new VideoGamePlatform() { Id = 4, PlatformId = 4, VideoGameId = 4 },
                new VideoGamePlatform() { Id = 5, PlatformId = 1, VideoGameId = 5 },
-               new VideoGamePlatform() { Id = 5, PlatformId = 2, VideoGameId = 5 },
-               new VideoGamePlatform() { Id = 5, PlatformId = 3, VideoGameId = 5 }
+               new VideoGamePlatform() { Id = 6, PlatformId = 2, VideoGameId = 5 },
+               new VideoGamePlatform() { Id = 7, PlatformId = 3, VideoGameId = 5 }
                );
         }
 
