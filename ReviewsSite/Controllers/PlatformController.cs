@@ -10,8 +10,8 @@ namespace ReviewsSite.Controllers
 {
     public class PlatformController : Controller
     {
-        public IRepository<Platform> platformRepo;
-        public PlatformController(IRepository<Platform> platformRepo)
+        public PlatformRepository platformRepo;
+        public PlatformController(PlatformRepository platformRepo)
         {
             this.platformRepo = platformRepo;
         }

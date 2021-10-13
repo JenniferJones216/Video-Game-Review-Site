@@ -15,7 +15,6 @@ namespace ReviewsSite.Repositories
             this.db = db;
         }
         
-
         public void Create(Review obj)
         {
             throw new NotImplementedException();
@@ -31,6 +30,10 @@ namespace ReviewsSite.Repositories
             return db.Reviews.Where(r => r.Id == id).FirstOrDefault();
         }
 
+        public IEnumerable<Review> GetByGameID(int gameid)
+        {
+            return db.Reviews.Where(r => r.VideoGameId == gameid);
+        }
         public IEnumerable<Review> GetAll()
         {
             return db.Reviews.ToList();
