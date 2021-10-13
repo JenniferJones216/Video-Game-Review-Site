@@ -8,11 +8,10 @@ using System.Threading.Tasks;
 
 namespace ReviewsSite.Controllers
 {
-    // This may become obsolete *********************************************************************
     public class VideoGameController : Controller
     {
-        public IRepository<VideoGame> videoGameRepo;
-        public VideoGameController(IRepository<VideoGame> videoGameRepo)
+        public VideoGameRepository videoGameRepo;
+        public VideoGameController(VideoGameRepository videoGameRepo)
         {
             this.videoGameRepo = videoGameRepo;
         }

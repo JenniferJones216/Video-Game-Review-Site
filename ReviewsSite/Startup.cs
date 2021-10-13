@@ -30,10 +30,10 @@ namespace ReviewsSite
         {
             services.AddMvc();
             services.AddDbContext<VideoGameContext>();
-            services.AddScoped<IRepository<VideoGame>, VideoGameRepository>();
-            services.AddScoped<IRepository<Platform>, PlatformRepository>();
-            services.AddScoped<IRepository<Review>, ReviewRepository>();
-            services.AddScoped<IRepository<VideoGamePlatform>, VideoGamePlatformRepository>();
+            services.AddScoped<VideoGameRepository>();
+            services.AddScoped<PlatformRepository>();
+            services.AddScoped<ReviewRepository>();
+            services.AddScoped<VideoGamePlatformRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

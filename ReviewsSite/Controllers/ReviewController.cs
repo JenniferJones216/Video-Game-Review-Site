@@ -10,19 +10,23 @@ namespace ReviewsSite.Controllers
 {
     public class ReviewController : Controller
     {
-        public IRepository<Review> reviewRepo;
+        public ReviewRepository reviewRepo;
 
-        public ReviewController(IRepository<Review> reviewRepo)
+        public ReviewController(ReviewRepository reviewRepo)
         {
             this.reviewRepo = reviewRepo;
         }
-        public ViewResult Index()
+        public ViewResult Index(int? id)
         {
-            return View(reviewRepo.GetAll());
-        }
-        public ViewResult Details(int id)
-        {
-            return View(reviewRepo.GetByID(id));
+            if(id == null)
+            {
+                return View(reviewRepo.GetAll());
+            } 
+            else
+            {
+                return View(reviewRepo.GetByGameID((int)id));
+            }
+            
         }
         //public IActionResult Index()
         //{
