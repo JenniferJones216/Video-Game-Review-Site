@@ -14,14 +14,5 @@
     <a href="~/Views/Review/Index.cshtml">Reviews</a>
 </div>
 
-<body>
-    <ul>
-        @* for each video game user should be able to add a game, write/rate a reivew, remove a game, *@
-        @foreach (var game in Model)
-        {
-            <li>@game.Name  <a href="/Home/Create">Add</a></li>
-        }
-    </ul>
-</body>
 
 
