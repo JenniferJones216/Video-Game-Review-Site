@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ReviewsSite;
 
 namespace ReviewsSite.Migrations
 {
     [DbContext(typeof(VideoGameContext))]
-    partial class VideoGameContextModelSnapshot : ModelSnapshot
+    [Migration("20211014150211_VideoEmbed")]
+    partial class VideoEmbed
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -166,7 +168,7 @@ namespace ReviewsSite.Migrations
                             Name = "Dishonored",
                             PictureURL = "https://upload.wikimedia.org/wikipedia/en/thumb/6/65/Dishonored_box_art_Bethesda.jpg/220px-Dishonored_box_art_Bethesda.jpg",
                             ReleaseDate = "9 October 2012",
-                            VideoURL = "https://www.youtube.com/embed/-XbQgdSlsd0"
+                            VideoURL = "https://www.youtube.com/embed/XbQgdSlsd0"
                         },
                         new
                         {
