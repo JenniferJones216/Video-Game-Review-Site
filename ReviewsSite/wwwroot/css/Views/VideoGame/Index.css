@@ -25,6 +25,7 @@ table > thead > tr > th > h3 {
 
 table > tbody > tr > td {
     font-family: var(--main-font), Verdana, sans-serif;
+    font-size: 14px;
     color: var(--accent-dark);
     text-align: center;
 }
@@ -32,8 +33,9 @@ table > tbody > tr > td {
 table > tbody > tr > td > a {
     color: var(--accent-dark);
     font-family:var(--main-font), Tahoma, sans-serif;
-    padding: 1em;
     text-decoration: none;
+    padding: 2em;
+    font-size: 14px;
 }
 
 table > tbody > tr > td > a:visited {
@@ -42,4 +44,9 @@ table > tbody > tr > td > a:visited {
 
 table > tbody > tr > td > a:hover {
     background: var(--accent-light);
+}
+
+table tbody tr #gameCover {
+    padding-right: 2em;
+    padding-bottom: 1em;
 }

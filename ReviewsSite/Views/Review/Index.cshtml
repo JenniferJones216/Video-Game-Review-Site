@@ -4,8 +4,9 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
-
+<head>
+    <link rel="stylesheet" href="~/css/Views/Review/Index.css" />
+</head>
 <p>
     <a asp-action="Create">Create New</a>
 </p>
@@ -13,19 +14,18 @@
     <thead>
         <tr>
             <th>
-                <strong> Game </strong>
+                <h3> Game </h3>
                 @*@Html.DisplayNameFor(model => model.VideoGame)*@
             </th>
             <th>
-                <strong> Rating </strong>
+                <h3> Rating </h3>
             </th>
             <th>
-                <strong> Reviewer </strong>
+                <h3> Reviewer </h3>
                 @*@Html.DisplayNameFor(model => model.Username)*@
             </th>
-            <th></th>
             <th>
-                <strong> Review </strong>
+                <h3> Review </h3>
                 @*@Html.DisplayNameFor(model => model.Usercomment)*@
             </th>
         </tr>
@@ -33,25 +33,18 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
-            <td>
+            <td id="videoGameName">
                 @item.VideoGame.Name
             </td>
-            <td>
+            <td id="rating">
                 @item.Rating
             </td>
-            <td>
+            <td id="username">
                 @item.Username
             </td>
-
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-            <td>
+            <td id="review">
                 @item.Usercomment
             </td>
-
-
         </tr>
 }
     </tbody>

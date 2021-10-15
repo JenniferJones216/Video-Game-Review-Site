@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="~/css/Views/VideoGame/Index.css"/>
 }
 
-<h1>Welcome to GAMES REVIEW, where we review your games.</h1>
+<h1>Welcome to GAMES REVIEW</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -57,7 +57,7 @@
                 @*<td>
                     @Html.DisplayFor(modelItem => item.Description)
                 </td>*@
-                <td>
+                <td id="gameCover">
                     <img src=@item.PictureURL width=50px>
                 </td>
                 @*<td>
