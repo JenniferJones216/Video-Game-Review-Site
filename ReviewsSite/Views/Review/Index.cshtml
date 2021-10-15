@@ -13,40 +13,45 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Rating)
+                <strong> Game </strong>
+                @*@Html.DisplayNameFor(model => model.VideoGame)*@
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Usercomment)
+                <strong> Rating </strong>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Username)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.VideoGame)
+                <strong> Reviewer </strong>
+                @*@Html.DisplayNameFor(model => model.Username)*@
             </th>
             <th></th>
+            <th>
+                <strong> Review </strong>
+                @*@Html.DisplayNameFor(model => model.Usercomment)*@
+            </th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Rating)
+                @item.VideoGame.Name
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Usercomment)
+                @item.Rating
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Username)
+                @item.Username
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.VideoGameId)
-            </td>
+
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
             </td>
+            <td>
+                @item.Usercomment
+            </td>
+
+
         </tr>
 }
     </tbody>
