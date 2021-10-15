@@ -1,0 +1,38 @@
+:root {
+    --main-color: #016236; /*forest green*/
+    --accent-dark: #06040A; /*blue-black*/
+    --accent-light: #02894B; /*emerald green*/
+    --accent-background: #BED3AB; /*seafoam green*/
+    --main-font: 'Inconsolata';
+    --header-font: 'DotGothic16';
+}
+
+* {
+    font-family: sans-serif;
+    line-height: 1.618em;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+html {
+    font-size: 16px;
+    background-color: var(--accent-background);
+    margin-top: 3rem;
+}
+
+p{
+    font-family: var(--main-font), Verdana, Geneva, Tahoma, sans-serif;
+    color:var(--accent-background);
+}
+
+h1, h2, h3, h4, h5{
+    font-family: var(--header-font), Tahoma, sans-serif;
+    color:var(--main-color);
+    align-content:center;
+    margin-left: auto;
+    margin-right: auto;
+    display:flex;
+    justify-content: space-around;
+}
