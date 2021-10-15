@@ -31,12 +31,49 @@ div dl dt iframe {
     justify-content: center;
 }
 
-table {
-    background-color:var(--accent-light);
-    margin-left: 15em;
-    margin-right: 15em;
+#reviews {
+    margin-left: 10rem;
+    margin-right: 10rem;
+    display: grid;
+    grid-column-template: 3 auto;
+    grid-row-template: 3 auto;
 }
 
-table table tr td {
-    font-family: var(--main-font), Verdana, sans-serif;
+#reviews #review {
+    background-color: var(--main-color);
+    border-style: groove;
+    border-width: 2px;
+    border-color: var(--accent-dark);
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+div table tbody tr td {
+    font-family: var(--main-font), Tahoma, sans-serif;
+}
+
+div table tbody tr td a {
+    font-family: var(--main-font), Tahoma, sans-serif;
+    text-decoration: none;
+    padding: 5px;
+}
+
+div table tbody tr td a:visited {
+    color: var(--accent-dark);
+}
+
+div table tbody tr td a:hover {
+    background: var(--accent-light);
+}
+
+div table tbody tr #rating {
+    font-family: var(--header-font);
+}
+
+div table tbody tr #username {
+    text-align: right;
+}
+
+div table tbody tr #actions {
+    text-align: center;
 }
