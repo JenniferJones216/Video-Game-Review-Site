@@ -36,7 +36,7 @@ namespace ReviewsSite.Repositories
         }
         public IEnumerable<Review> GetAll()
         {
-            return db.Reviews.ToList();
+            return db.Reviews.OrderBy(r => r.VideoGame.Name).ToList();
         }
 
         public String GetVideoGameName(int videoGameId)
