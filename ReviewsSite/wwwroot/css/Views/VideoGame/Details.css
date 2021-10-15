@@ -32,11 +32,32 @@ div dl dt iframe {
 }
 
 table {
-    background-color:var(--accent-light);
     margin-left: 15em;
     margin-right: 15em;
+    padding: 1em;
 }
 
-table table tr td {
+table tbody div #review {
+    background-color:var(--accent-dark);
+    outline-style: groove;
+    outline-width: medium;
+    outline-color: var(--main-color);
+    margin: 2em;
+
+}
+
+table tr td {
     font-family: var(--main-font), Verdana, sans-serif;
+}
+
+table tr td a {
+    font-family: var(--main-font), Verdana, sans-serif;
+}
+
+table tr td #rating {
+    font-weight: bold;
+}
+
+table tr td #usercomment {
+    
 }

@@ -36,28 +36,27 @@
          @foreach (var item in Model.Reviews)
             {
                 <tr>
-                    <td>
+                    <td class="rating">
                         @Html.DisplayFor(modelItem => item.Rating)
                     </td>
-                 </tr>
+                    </tr>
                 <tr>
-                    <td>
+                    <td class="userComment">
                         @Html.DisplayFor(modelItem => item.Usercomment)
-                     </td>
+                        </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td class="username">
                         @Html.DisplayFor(modelItem => item.Username)
                 </td>
-                 </tr>
+                    </tr>
                 <tr>
-                    <td>
+                    <td class="actions">
                         <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                         <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
                         <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
                     </td>
                 </tr>
-
                 }
     </tbody>
 </table>
