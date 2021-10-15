@@ -39,6 +39,11 @@ namespace ReviewsSite.Repositories
             return db.Reviews.ToList();
         }
 
+        public String GetVideoGameName(int videoGameId)
+        {
+            return db.VideoGames.Where(r => r.Id == videoGameId).FirstOrDefault().Name;
+        }
+
         public void Update(Review obj)
         {
             throw new NotImplementedException();
