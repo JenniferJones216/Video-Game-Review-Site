@@ -28,38 +28,40 @@
             @*<video src=@Model.VideoURL>Sorry your browser doesn't support this video</video>*@
             <iframe width="560" height="315" src="@Model.VideoURL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </dt>
-        </dl>
+    </dl>
 </div>
 
-<table>
-    <tbody>
-         @foreach (var item in Model.Reviews)
-            {
+<div id="reviews">
+    @foreach (var item in Model.Reviews)
+    {
+        <table id="review">
+            <tbody>
                 <tr>
-                    <td class="rating">
-                        @Html.DisplayFor(modelItem => item.Rating)
+                    <td id="rating">
+                        Rating: @Html.DisplayFor(modelItem => item.Rating)
                     </td>
-                    </tr>
-                <tr>
-                    <td class="userComment">
-                        @Html.DisplayFor(modelItem => item.Usercomment)
-                        </td>
                 </tr>
                 <tr>
-                    <td class="username">
-                        @Html.DisplayFor(modelItem => item.Username)
-                </td>
-                    </tr>
+                    <td id="userComment">
+                        @Html.DisplayFor(modelItem => item.Usercomment)
+                    </td>
+                </tr>
                 <tr>
-                    <td class="actions">
+                    <td id="username">
+                        @Html.DisplayFor(modelItem => item.Username)
+                    </td>
+                </tr>
+                <tr>
+                    <td id="actions">
                         <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                         <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
                         <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
                     </td>
                 </tr>
-                }
-    </tbody>
-</table>
+            </tbody>
+        </table>
+     }
+</div>
 
 <div>
     @*<a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |*@
