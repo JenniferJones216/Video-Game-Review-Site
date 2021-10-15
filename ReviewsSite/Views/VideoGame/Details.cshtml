@@ -4,10 +4,12 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<h1>
+    <link rel="stylesheet" href="~/css/Views/VideoGame/Details.css" />
+</h1>
 
 <div>
-    <h4>VideoGame</h4>
+    @*<h4>VideoGame</h4>*@
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
@@ -28,30 +30,38 @@
         </dt>
         </dl>
 </div>
-<tbody>
-    @foreach (var item in Model.Reviews)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Rating)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Usercomment)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Username)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.VideoGameId)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-    }
-</tbody>
+
+<table>
+    <tbody>
+         @foreach (var item in Model.Reviews)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Rating)
+                    </td>
+                 </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Usercomment)
+                     </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Username)
+                </td>
+                 </tr>
+                <tr>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+
+                }
+    </tbody>
+</table>
+
 <div>
     @*<a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |*@
     <a asp-action="Index">Back to List</a>

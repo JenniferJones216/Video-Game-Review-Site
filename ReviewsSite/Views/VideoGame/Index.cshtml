@@ -1,14 +1,19 @@
 ﻿@model IEnumerable<ReviewsSite.Models.VideoGame>
 
 <head>
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DotGothic16" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata" />
 </head>
 
 @{
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+@section Styles{ 
+    <link rel="stylesheet" href="~/css/Views/VideoGame/Index.css"/>
+}
+
+<h1>Welcome to GAMES REVIEW, where we review your games.</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -17,21 +22,29 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Name)
+                <h3>Video Game</h3>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ReleaseDate)
+                <h3>Release Date</h3>
+                @*@Html.DisplayNameFor(model => model.ReleaseDate)*@
             </th>
             @*<th>
                 @Html.DisplayNameFor(model => model.Description)
             </th>*@
             <th>
-                @Html.DisplayNameFor(model => model.PictureURL)
+                <p>
+
+                </p>
+                @*@Html.DisplayNameFor(model => model.PictureURL)*@
             </th>
             @*<th>
                 @Html.DisplayNameFor(model => model.VideoURL)
             </th>*@
-            <th></th>
+            <th>
+                <p>
+
+                </p>
+            </th>
         </tr>
     </thead>
     <tbody>
