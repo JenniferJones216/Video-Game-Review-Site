@@ -40,12 +40,12 @@ namespace ReviewsSite
             new VideoGame() { Id = 5, Name = "The Elder Scrolls V: Skyrim", ReleaseDate = "11 November 2011", Description = "This famed open-world action role-playing game takes place in the titular Skyrim province of Tamriel. The game's main story revolves around the player's character, the Dragonborn, on their quest to defeat Alduin the World-Eater, a dragon who is prophesied to destroy the world.", PictureURL = "https://upload.wikimedia.org/wikipedia/en/thumb/1/15/The_Elder_Scrolls_V_Skyrim_cover.png/220px-The_Elder_Scrolls_V_Skyrim_cover.png", VideoURL = "https://www.youtube.com/embed/JSRtYpNRoN0" }
                 );
             modelBuilder.Entity<Review>().HasData(
-                new Review() { Id = 1, Rating = 4.2, Username = "AweSome495", Usercomment = "I don't think there are many,if any, other games where you can play as a communist,schizophrenic,disco,cop.", VideoGameId = 1 },
+                new Review() { Id = 1, Rating = 4, Username = "AweSome495", Usercomment = "I don't think there are many,if any, other games where you can play as a communist,schizophrenic,disco,cop.", VideoGameId = 1 },
                 new Review() { Id = 6, Rating = 4.5, Username = "Bort", Usercomment = "I would die for Kim Kitsuragi", VideoGameId = 1},
                 new Review() { Id = 7, Rating = 4, Username = "anarky", Usercomment = "I don't think there are many,if any, other games where you can play as a communist, schizophrenic, disco, cop.", VideoGameId = 1 },
                 new Review() { Id = 8, Rating = 5, Username = "Denky", Usercomment = "Disco Elysium is genius, one of the best games ever. Must play this if you like good writing and tabletop RPGs", VideoGameId = 1 },
                 new Review() { Id = 2, Rating = 4.5, Username = "SINA - VF - 02", Usercomment = "let's just say i finished this game in every way possible & i'm about to play it again on pc", VideoGameId = 2 },
-                new Review() { Id = 9, Rating = 4.8, Username = "MammadYmir", Usercomment = "A MUST-PLAY to fans of pretty much any genre of games. Anything more I'd wouldnt even begin to describe the magnificence of the gameplay, the environment, and all of the other elements", VideoGameId = 2},
+                new Review() { Id = 9, Rating = 5, Username = "MammadYmir", Usercomment = "A MUST-PLAY to fans of pretty much any genre of games. Anything more I'd wouldnt even begin to describe the magnificence of the gameplay, the environment, and all of the other elements", VideoGameId = 2},
                 new Review() { Id = 10, Rating = 5, Username = "Vox", Usercomment = "A mix between Skyrim & the newer Hitman games. Underrated masterpiece", VideoGameId = 2},
                 new Review() { Id = 11, Rating = 5, Username = "Wracky <3 Y", Usercomment = "If this game was a guy, I'll marry him.", VideoGameId = 2 },
                 new Review() { Id = 3, Rating = 3, Username = "Barack Obama", Usercomment = "there was no cake :((((((((((((((((((((((((((((((((((((", VideoGameId = 3 },
@@ -53,7 +53,7 @@ namespace ReviewsSite
                 new Review() { Id = 13, Rating = 1, Username = "AshDragon", Usercomment = "The cake is a lieee!!!!!", VideoGameId = 3 },
                 new Review() { Id = 14, Rating = 3.5, Username = "Stellaris", Usercomment = "Great game good puzzle solving and challenging", VideoGameId = 3 },
                 new Review() { Id = 4, Rating = 4.5, Username = "J. Jonah. Jameson", Usercomment = "I wish I could erase my memory and play this game again.", VideoGameId = 4 },
-                new Review() { Id = 15, Rating = 4.2, Username = "YT_KameHameNah", Usercomment = "Fantastic puzzle game with a philosophy minigame hidden within", VideoGameId = 4 },
+                new Review() { Id = 15, Rating = 4, Username = "YT_KameHameNah", Usercomment = "Fantastic puzzle game with a philosophy minigame hidden within", VideoGameId = 4 },
                 new Review() { Id = 16, Rating = 4.5, Username = "Sloppy Joe", Usercomment = "The Talos principle is a very good puzzle game. The gameplay is okay but the story is amazing. It's both challenging and engaging", VideoGameId = 4 },
                 new Review() { Id = 17, Rating = 4, Username = "Jacquee Mameet", Usercomment = "will make you think long and hard the next time you fail a captcha test", VideoGameId = 4 },
                 new Review() { Id = 18, Rating = 4, Username = "bug", Usercomment = "Good game to play when you're having an existential crisis", VideoGameId = 4 },
