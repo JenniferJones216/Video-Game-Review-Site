@@ -10,9 +10,9 @@ namespace ReviewsSite.Controllers
 {
     public class VideoGameController : Controller
     {
-        public VideoGameRepository videoGameRepo;
+        public IRepository<VideoGame> videoGameRepo;
         public VideoGameContext db;
-        public VideoGameController(VideoGameRepository videoGameRepo, VideoGameContext db)
+        public VideoGameController(IRepository<VideoGame> videoGameRepo, VideoGameContext db)
         {
             this.videoGameRepo = videoGameRepo;
             this.db = db;
@@ -23,7 +23,7 @@ namespace ReviewsSite.Controllers
 
             foreach(var game in videoGames)
             {
-                game.GetAverage();
+                game.SetAverage();
             }
 
             return View(videoGames);
