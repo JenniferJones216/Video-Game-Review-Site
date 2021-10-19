@@ -15,9 +15,9 @@
 
 <h1>Welcome to GAMES REVIEW</h1>
 
-<p>
+@*<p>
     <a asp-action="Create">Create New</a>
-</p>
+</p>*@
 <table class="table">
     <thead>
         <tr>
@@ -26,22 +26,14 @@
             </th>
             <th>
                 <h3>Release Date</h3>
-                @*@Html.DisplayNameFor(model => model.ReleaseDate)*@
             </th>
-            @*<th>
-                @Html.DisplayNameFor(model => model.Description)
-            </th>*@
             <th>
                 <h3>Average Rating</h3>
             </th>
             <th>
                 <p>
                 </p>
-                @*@Html.DisplayNameFor(model => model.PictureURL)*@
             </th>
-            @*<th>
-                @Html.DisplayNameFor(model => model.VideoURL)
-            </th>*@
         </tr>
     </thead>
     <tbody>
@@ -56,32 +48,12 @@
             <td>
                 @Html.DisplayFor(modelItem => item.ReleaseDate)
             </td>
-            
-            @*<td>
-            @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            *@
-            @*@{  
-                foreach (var result in ViewBag.query)
-                {
-                    if (result.VideoGameId == item.Id)
-                    {
-                        ViewBag.ThisAverage = result.Average;
-                        break;
-                    }
-                    else { ViewBag.ThisAverage = -1; }
-                }
-
-            }*@
             <td>
                 @item.AverageRating
             </td>
             <td id="gameCover">
                 <img src=@item.PictureURL width=50px>
             </td>
-            @*<td>
-            @Html.DisplayFor(modelItem => item.VideoURL)
-            </td>*@
         </tr>
         }
     </tbody>

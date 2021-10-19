@@ -5,9 +5,8 @@ using System.Threading.Tasks;
 
 namespace ReviewsSite.Models
 {
-    public class Review
+    public class Review : BaseModel
     {
-        public int Id { get; set; }
         public double Rating { get; set; }
         public string Usercomment { get; set; }
         public string Username { get; set; }

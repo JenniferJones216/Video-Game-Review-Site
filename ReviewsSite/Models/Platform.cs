@@ -5,9 +5,8 @@ using System.Threading.Tasks;
 
 namespace ReviewsSite.Models
 {
-    public class Platform
+    public class Platform : BaseModel
     {
-        public int Id { get; set; }
         public string Name { get; set; }
 
         public virtual List<VideoGamePlatform> VideoGames { get; set; }

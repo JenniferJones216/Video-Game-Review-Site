@@ -20,11 +20,11 @@ namespace ReviewsSite.Controllers
         {
             if(id == null)
             {
-                return View(reviewRepo.GetAll());
+                return View(reviewRepo.GetAllOrdered());
             } 
             else
             {
-                return View(reviewRepo.GetByGameID((int)id));
+                return View(reviewRepo.GetByGameId((int)id));
             }
             
         }
