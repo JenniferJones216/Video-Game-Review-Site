@@ -27,10 +27,8 @@ namespace ReviewsSite
         {
             services.AddMvc();
             services.AddDbContext<VideoGameContext>();
-            services.AddScoped<VideoGameRepository>();
-            services.AddScoped<PlatformRepository>();
             services.AddScoped<ReviewRepository>();
-            services.AddScoped<VideoGamePlatformRepository>();
+            services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
 
         }

@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace ReviewsSite.Models
 {
-    public class VideoGame
+    public class VideoGame : BaseModel
     {
-        public int Id { get; set; }
         public string Name { get; set; }
         public string ReleaseDate { get; set; }
         [NotMapped]
@@ -18,10 +17,8 @@ namespace ReviewsSite.Models
         public string Description { get; set; }
         public string PictureURL { get; set; }
         public string VideoURL { get; set; }
-        //Eventually add a picture(virtual)
-        // by url add a string feild
 
-        public void GetAverage()
+        public void SetAverage()
         {
             if(Reviews.Count > 0)
             {

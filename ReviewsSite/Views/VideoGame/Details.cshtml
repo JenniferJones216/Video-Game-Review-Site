@@ -1,4 +1,4 @@
-﻿@model ReviewsSite.Models.VideoGame
+@model ReviewsSite.Models.VideoGame
 
 @{
     ViewData["Title"] = "Details";
@@ -7,6 +7,7 @@
 <h1>
     <link rel="stylesheet" href="~/css/Views/VideoGame/Details.css" />
 </h1>
+
 
 <div>
     @*<h4>VideoGame</h4>*@
@@ -42,10 +43,6 @@
     </dl>
 </div>
 
-
-
-
-
 <div id="reviews">
     @foreach (var item in Model.Reviews)
     {
@@ -69,7 +66,6 @@
                 <tr>
                     <td id="actions">
                         <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
                         <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
                     </td>
                 </tr>
