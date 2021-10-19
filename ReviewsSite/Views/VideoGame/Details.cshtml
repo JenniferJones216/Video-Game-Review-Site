@@ -24,12 +24,27 @@
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Description)
         </dd>
+        <dt>
+            Platforms
+        </dt>
+        <dd>
+            <ul>
+                @foreach (var platform in Model.Platforms)
+                {
+                    <li>@platform.Platform.Name</li>
+                }
+            </ul>
+        </dd>
         <dt class="col-sm-2">
             @*<video src=@Model.VideoURL>Sorry your browser doesn't support this video</video>*@
             <iframe width="560" height="315" src="@Model.VideoURL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </dt>
     </dl>
 </div>
+
+
+
+
 
 <div id="reviews">
     @foreach (var item in Model.Reviews)
@@ -60,6 +75,6 @@
                 </tr>
             </tbody>
         </table>
-     }
+    }
 </div>
 
