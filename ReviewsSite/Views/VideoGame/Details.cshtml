@@ -8,28 +8,30 @@
     <link rel="stylesheet" href="~/css/Views/VideoGame/Details.css" />
 </h1>
 
-<a asp-action="Create" asp-controller="Review" asp-route-id="@Model.Id">New Review</a>
+@*<a asp-action="Create" asp-controller="Review" asp-route-id="?VideoGameId=@Model.Id">New Review</a>*@
+<a href="/review/create/?videogameid=@Model.Id">new review</a>
+@*int? VideoGameId*@
 
-<select @ViewBag.Disabled />
+@*<select @ViewBag.Disabled
 
-<div>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-        <dt class="col-sm-2">
-            @*<video src=@Model.VideoURL>Sorry your browser doesn't support this video</video>*@
-            <iframe width="560" height="315" src="@Model.VideoURL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+            <dt class="col-sm-2">
+                @*<video src=@Model.VideoURL>Sorry your browser doesn't support this video</video>*@
+<iframe width="560" height="315" src="@Model.VideoURL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </dt>
     </dl>
 </div>
