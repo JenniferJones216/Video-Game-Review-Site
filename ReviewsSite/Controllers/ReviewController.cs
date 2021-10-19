@@ -28,6 +28,28 @@ namespace ReviewsSite.Controllers
             }
             
         }
+
+        public IActionResult Create(int? VideoGameId)
+        {
+            if(VideoGameId != null)
+            {
+                ViewBag.Disabled = "disabled";
+            }
+            //ViewBag.VideoGames = reviewRepo.get
+
+            Review myReview = new Review();
+            myReview.VideoGameId = (int) VideoGameId;
+
+            return View(myReview);
+        }
+        [HttpPost]
+        public IActionResult Create(int VideoGameId, Review review)
+        {
+
+            reviewRepo.Create(review);
+
+            return View(review);
+        }
         //public IActionResult Index()
         //{
         //    return View();

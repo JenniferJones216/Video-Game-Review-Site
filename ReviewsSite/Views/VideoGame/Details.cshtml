@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="~/css/Views/VideoGame/Details.css" />
 </h1>
 
+<a asp-action="Create" asp-controller="Review" asp-route-id="@Model.Id">New Review</a>
+
+<select @ViewBag.Disabled />
+
 <div>
     <hr />
     <dl class="row">
@@ -58,6 +62,6 @@
                 </tr>
             </tbody>
         </table>
-     }
+    }
 </div>
 
