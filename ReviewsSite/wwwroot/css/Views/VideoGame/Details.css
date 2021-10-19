@@ -5,6 +5,7 @@
     --accent-background: #BED3AB; /*seafoam green*/
     --main-font: 'Inconsolata';
     --header-font: 'DotGothic16';
+    --text-light: #BED3AB;
 }
 
 div > dl > dt {
@@ -39,14 +40,15 @@ div dl dt iframe {
     grid-row-template: 3 auto;
 }
 
-#reviews #review {
-    background-color: var(--main-color);
-    border-style: groove;
-    border-width: 2px;
-    border-color: var(--accent-dark);
-    border-radius: 5px;
-    margin-bottom: 1rem;
-}
+    #reviews #review {
+        background-color: var(--main-color);
+        border-style: groove;
+        border-width: 2px;
+        border-color: var(--accent-dark);
+        border-radius: 5px;
+        margin-bottom: 1rem;
+        color: #BED3AB;
+    }
 
 div table tbody tr td {
     font-family: var(--main-font), Tahoma, sans-serif;
