@@ -4,9 +4,9 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>
+@section Styles {
     <link rel="stylesheet" href="~/css/Views/VideoGame/Details.css" />
-</h1>
+}
 
 <div>
     @*<h4>VideoGame</h4>*@
@@ -66,8 +66,8 @@
                 </tr>
                 <tr>
                     <td id="actions">
-                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                        <a asp-controller="Review" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a asp-action="Delete" asp-route-id="@Model.Id">Delete</a>
                     </td>
                 </tr>
             </tbody>
