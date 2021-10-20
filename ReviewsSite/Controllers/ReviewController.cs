@@ -47,7 +47,7 @@ namespace ReviewsSite.Controllers
         {
             reviewRepo.Create(review);
 
-            return RedirectToAction("Details", "VideoGame", review.Id);
+            return RedirectToAction("Details", "VideoGame", new { id = review.VideoGameId });
         }
         //public IActionResult Index()
         //{
