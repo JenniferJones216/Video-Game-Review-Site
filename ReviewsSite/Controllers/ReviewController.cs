@@ -29,7 +29,7 @@ namespace ReviewsSite.Controllers
             
         }
 
-        public IActionResult Create(int VideoGameId)
+        public IActionResult Create(int id)             //id = videogameid to our knowledge
         {
             //if(VideoGameId != null)
             //{
@@ -38,7 +38,7 @@ namespace ReviewsSite.Controllers
             //ViewBag.VideoGames = reviewRepo.get
 
             Review myReview = new Review();
-            myReview.VideoGameId = VideoGameId;
+            myReview.VideoGameId = id;
 
             return View(myReview);
         }
