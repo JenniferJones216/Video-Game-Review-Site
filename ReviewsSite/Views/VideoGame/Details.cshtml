@@ -29,12 +29,12 @@
             Platforms
         </dt>
         <dd>
-            <ul>
+            <section>
                 @foreach (var platform in Model.Platforms)
                 {
-                    <li>@platform.Platform.Name</li>
+                    <p>@platform.Platform.Name</p>
                 }
-            </ul>
+            </section>
         </dd>
         <dt class="col-sm-2">
             @*<video src=@Model.VideoURL>Sorry your browser doesn't support this video</video>*@

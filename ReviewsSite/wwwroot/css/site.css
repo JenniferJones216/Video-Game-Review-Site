@@ -5,6 +5,7 @@
     --accent-background: #BED3AB; /*seafoam green*/
     --main-font: 'Inconsolata';
     --header-font: 'DotGothic16';
+    --text-light: #BED3AB;
 }
 
 * {
@@ -22,9 +23,9 @@ html {
     margin-top: 3rem;
 }
 
-p{
+p {
     font-family: var(--main-font), Verdana, Geneva, Tahoma, sans-serif;
-    color:var(--accent-background);
+    color: var(--text-light);
 }
 
 h1, h2, h3, h4, h5{
