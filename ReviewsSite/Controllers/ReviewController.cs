@@ -29,23 +29,22 @@ namespace ReviewsSite.Controllers
             
         }
 
-        public IActionResult Create(int? VideoGameId)
+        public IActionResult Create(int id)             //id = videogameid to our knowledge
         {
-            if(VideoGameId != null)
-            {
-                ViewBag.Disabled = "disabled";
-            }
+            //if(VideoGameId != null)
+            //{
+            //    ViewBag.Disabled = "disabled";
+            //}
             //ViewBag.VideoGames = reviewRepo.get
 
             Review myReview = new Review();
-            myReview.VideoGameId = (int) VideoGameId;
+            myReview.VideoGameId = id;
 
             return View(myReview);
         }
         [HttpPost]
-        public IActionResult Create(int VideoGameId, Review review)
+        public IActionResult Create(Review review)
         {
-
             reviewRepo.Create(review);
 
             return View(review);
