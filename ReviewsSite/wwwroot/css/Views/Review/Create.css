@@ -5,6 +5,7 @@
     --accent-background: #BED3AB; /*seafoam green*/
     --main-font: 'Inconsolata';
     --header-font: 'DotGothic16';
+    --text-light: #BED3AB;
 }
 
 h1, h4 {

@@ -5,11 +5,17 @@
     --accent-background: #BED3AB; /*seafoam green*/
     --main-font: 'Inconsolata';
     --header-font: 'DotGothic16';
+    --text-light: #BED3AB;
 }
 
 table {
     margin-left: 5em;
     margin-right: 5em;
+    margin-bottom: 2em;
+}
+
+#ReviewTable {
+    color: var(--text-light);
 }
 
 table thead tr th h3 {
@@ -22,7 +28,7 @@ table thead tr th h3 {
 table tbody tr td {
     background-color: var(--main-color);
     font-family: var(--main-font), Verdana, sans-serif;
-    color: var(--accent-dark);
+    color: var(--text-light);
     font-size: 14px;
     padding: .5rem;
 }

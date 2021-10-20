@@ -15,6 +15,8 @@ div > dl > dt {
     font-weight: bold;
     margin-left: 4em;
     margin-right: 4em;
+    margin-bottom: .5em;
+    margin-top: .5em;
 }
 
 div dl dd {
@@ -32,6 +34,12 @@ div dl dt iframe {
     justify-content: center;
 }
 
+div dl dd section p {
+    font-family: var(--main-font), Verdana, sans-serif;
+    font-size: 14px;
+    color: var(--accent-dark);
+}
+
 #reviews {
     margin-left: 10rem;
     margin-right: 10rem;
@@ -40,15 +48,15 @@ div dl dt iframe {
     grid-row-template: 3 auto;
 }
 
-    #reviews #review {
-        background-color: var(--main-color);
-        border-style: groove;
-        border-width: 2px;
-        border-color: var(--accent-dark);
-        border-radius: 5px;
-        margin-bottom: 1rem;
-        color: #BED3AB;
-    }
+#reviews #review {
+    background-color: var(--main-color);
+    border-style: groove;
+    border-width: 2px;
+    border-color: var(--accent-dark);
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    color: var(--text-light);
+}
 
 div table tbody tr td {
     font-family: var(--main-font), Tahoma, sans-serif;
