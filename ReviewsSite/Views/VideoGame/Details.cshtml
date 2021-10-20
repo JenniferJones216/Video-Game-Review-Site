@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="~/css/Views/VideoGame/Details.css" />
 </h1>
 
-<a href="/Review/Create/@Model.Id">New Review</a>
-
 <div>
     @*<h4>VideoGame</h4>*@
     <hr />
@@ -43,6 +41,8 @@
         </dt>
     </dl>
 </div>
+
+<a href="/Review/Create/@Model.Id">New Review</a>
 
 <div id="reviews">
     @foreach (var item in Model.Reviews)

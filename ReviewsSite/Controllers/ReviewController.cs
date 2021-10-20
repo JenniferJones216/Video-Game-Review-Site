@@ -47,11 +47,24 @@ namespace ReviewsSite.Controllers
         {
             reviewRepo.Create(review);
 
-            return View(review);
+            return RedirectToAction("Details", "VideoGame", review.Id);
         }
         //public IActionResult Index()
         //{
         //    return View();
         //}
+
+        /*public IActionResult Edit(int id)
+        {
+            var review = reviewRepo.GetByID(id);
+            return View(review);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(Review review)
+        {
+            reviewRepo.Update(review);
+            return RedirectToAction("Details", "VideoGame");
+        }*/
     }
 }
