@@ -59,8 +59,19 @@ namespace ReviewsSite.Controllers
         public IActionResult Edit(Review review)
         {
             reviewRepo.Update(review);
-            int redirectID = 1;
-            return RedirectToAction("Details", "VideoGame", new { id = redirectID});
+            return RedirectToAction("Details", "VideoGame", new { id = review.VideoGameId });
+        }
+
+        public IActionResult ConfirmDelete(int id)
+        {
+            return View(reviewRepo.GetByID(id));
+        }
+
+        public IActionResult Delete(int id)
+        {
+            int videoGameId = reviewRepo.GetByID(id).VideoGameId;
+            reviewRepo.Delete(reviewRepo.GetByID(id));
+            return RedirectToAction("Details", "VideoGame", new { id = videoGameId });
         }
     }
 }
