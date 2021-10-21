@@ -40,6 +40,7 @@ namespace ReviewsSite.Repositories
 
         public void Update(T obj)
         {
+            entities.Update(obj);
             db.SaveChanges();
         }
     }
