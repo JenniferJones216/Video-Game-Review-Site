@@ -1,0 +1,14 @@
+﻿:root {
+    --main-color: #016236; /*forest green*/
+    --accent-dark: #06040A; /*blue-black*/
+    --accent-light: #02894B; /*emerald green*/
+    --accent-background: #BED3AB; /*seafoam green*/
+    --main-font: 'Inconsolata';
+    --header-font: 'DotGothic16';
+    --text-light: #BED3AB;
+}
+
+h1, h4 {
+    font-family: 'Inconsolata';
+}
+
