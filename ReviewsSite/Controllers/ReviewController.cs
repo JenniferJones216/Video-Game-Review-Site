@@ -26,7 +26,6 @@ namespace ReviewsSite.Controllers
             {
                 return View(reviewRepo.GetByGameId((int)id));
             }
-            
         }
 
         public IActionResult Create(int id)             //id = videogameid to our knowledge
@@ -36,21 +35,21 @@ namespace ReviewsSite.Controllers
             //    ViewBag.Disabled = "disabled";
             //}
             //ViewBag.VideoGames = reviewRepo.get
-
+            TempData["ReturnUrl"] = Request.Headers["Referer"].ToString();
             Review myReview = new Review();
             myReview.VideoGameId = id;
-
             return View(myReview);
         }
+
         [HttpPost]
         public IActionResult Create(Review review)
         {
             reviewRepo.Create(review);
-
             return RedirectToAction("Details", "VideoGame", new { id = review.VideoGameId });
         }
         public IActionResult Edit(int id)           //THIS IS THE REVIEW ID
         {
+            TempData["ReturnUrl"] = Request.Headers["Referer"].ToString();
             var review = reviewRepo.GetByID(id);
             return View(review);
         }
@@ -59,19 +58,20 @@ namespace ReviewsSite.Controllers
         public IActionResult Edit(Review review)
         {
             reviewRepo.Update(review);
-            return RedirectToAction("Details", "VideoGame", new { id = review.VideoGameId });
+            //return RedirectToAction("Details", "VideoGame", new { id = review.VideoGameId });
+            return Redirect(TempData["ReturnUrl"].ToString());
         }
 
         public IActionResult ConfirmDelete(int id)
         {
+            TempData["ReturnUrl"] = Request.Headers["Referer"].ToString();
             return View(reviewRepo.GetByID(id));
         }
 
         public IActionResult Delete(int id)
         {
-            int videoGameId = reviewRepo.GetByID(id).VideoGameId;
             reviewRepo.Delete(reviewRepo.GetByID(id));
-            return RedirectToAction("Details", "VideoGame", new { id = videoGameId });
+            return Redirect(TempData["ReturnUrl"].ToString());
         }
     }
 }
