@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="~/css/Views/VideoGame/Details.css" />
 </head>
 
-<a href="/Review/Create/@Model.Id">New Review</a>
-
 <div>
     @*<h4>VideoGame</h4>*@
     <hr />
@@ -44,6 +42,8 @@
     </dl>
 </div>
 
+<a href="/Review/Create/@Model.Id">New Review</a>
+
 <div id="reviews">
     @foreach (var item in Model.Reviews)
     {
@@ -66,8 +66,8 @@
                 </tr>
                 <tr>
                     <td id="actions">
-                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                        <a asp-controller="Review" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a asp-controller="Review" asp-action="ConfirmDelete" asp-route-id="@item.Id">Delete</a>
                     </td>
                 </tr>
             </tbody>
