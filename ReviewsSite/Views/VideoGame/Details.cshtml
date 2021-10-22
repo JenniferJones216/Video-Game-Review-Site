@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="~/css/Views/VideoGame/Details.css" />
 </head>
 
-<div>
+<div id="details">
     @*<h4>VideoGame</h4>*@
     <hr />
     <dl class="row">
@@ -39,16 +39,24 @@
             @*<video src=@Model.VideoURL>Sorry your browser doesn't support this video</video>*@
             <iframe width="560" height="315" src="@Model.VideoURL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </dt>
+        @*<dt>
+            
+        </dt>*@
     </dl>
 </div>
 
-<a href="/Review/Create/@Model.Id">New Review</a>
+<div class="NewReview">
+    <a asp-controller="Review" asp-action="Create" asp-route-id="@Model.Id">Write a New Review</a>
+</div>
+
+
 
 <div id="reviews">
     @foreach (var item in Model.Reviews)
     {
         <table id="review">
             <tbody>
+               
                 <tr>
                     <td id="rating">
                         Rating: @Html.DisplayFor(modelItem => item.Rating)

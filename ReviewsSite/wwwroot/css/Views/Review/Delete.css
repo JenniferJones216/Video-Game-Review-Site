@@ -12,17 +12,27 @@ h1, h4 {
     font-family: 'Inconsolata';
 }
 
-.row {
+#videoGameName, #username, #rating, #review, h2 {
+    padding-bottom: 1em;
+}
+
+#delete {
     display: block;
-    padding: 1em;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+    text-align: center;
 }
 
-.form-group {
-    padding: 1em;
+#DeleteLink a {
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--main-color);
 }
 
+#DeleteLink a:hover {
+    background-color: var(--accent-light);
+    color: var(--text-light);
+}
 
 

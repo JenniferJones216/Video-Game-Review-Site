@@ -1,12 +1,13 @@
 ﻿@model ReviewsSite.Models.Review
-
-@{
-    ViewData["Title"] = "Create";
-}
+@*@{
+        ViewData["Title"] = "Create";
+    }*@
 
 <head>
     <link rel="stylesheet" href="~/css/Views/Review/Create.css" />
 </head>
+
+
 
 <h1>Create</h1>
 
@@ -25,12 +26,12 @@
             </div>
             <div class="form-group">
                 <label asp-for="Rating" class="control-label">Rating</label>
-                <input asp-for="Rating" class="form-control" />
+                <select asp-for="Rating" class="form-control" asp-items="@(new SelectList(ViewBag.Ratings,"Rating"))"></select>
                 <span asp-validation-for="Rating" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Usercomment" class="control-label">Comment</label>
-                <input asp-for="Usercomment" class="form-control" />
+                @*<label asp-for="Usercomment" class="control-label">New Review</label>*@
+                <textarea id="usercomment" rows="8" cols="50" asp-for="Usercomment" class="form-control" />Write your review here...</textarea>
                 <span asp-validation-for="Usercomment" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -40,9 +41,6 @@
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

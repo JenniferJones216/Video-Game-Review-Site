@@ -22,7 +22,7 @@ namespace ReviewsSite.Models
         {
             if(Reviews.Count > 0)
             {
-                AverageRating = Reviews.Select(r => r.Rating).Average();
+                AverageRating = Math.Round(Reviews.Select(r => r.Rating).Average(),2,MidpointRounding.AwayFromZero);
             }
             else
             {
