@@ -12,7 +12,7 @@ html {
     background-color: var(--accent-background);
 }
 
-h1, h4 {
+h1{
     font-family: 'Inconsolata';
 }
 
@@ -26,6 +26,7 @@ h1, h4 {
     margin-right: auto;
     width: 50%;
     text-align: center;
+    background-color: var(--accent-light);
 }
 
 #DeleteLink a {
@@ -38,5 +39,6 @@ h1, h4 {
     background-color: var(--accent-light);
     color: var(--text-light);
 }
+
 
 

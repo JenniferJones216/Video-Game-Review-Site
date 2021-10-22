@@ -49,8 +49,6 @@ div > dl > dt > a {
     font-size: 20px;
     color: var(--main-color);
     font-weight: bold;
-   /* margin-left: 4em;
-    margin-right: 4em;*/
     text-align: center;
     margin-bottom: 3em;
     margin-top: .5em;
@@ -107,6 +105,7 @@ div > dl > dt > a {
     border-radius: 5px;
     margin-bottom: 1rem;
     color: var(--text-light);
+    padding: 1em;
 }
 
 div table tbody tr td {
@@ -121,7 +120,7 @@ div table tbody tr td a {
 }
 
 div table tbody tr td a:visited {
-    color: var(--accent-dark);
+    color: var(--text-light);
 }
 
 div table tbody tr td a:hover {
@@ -130,6 +129,7 @@ div table tbody tr td a:hover {
 
 div table tbody tr #rating {
     font-family: var(--header-font);
+    padding-bottom:.5em
 }
 
 div table tbody tr #username {
