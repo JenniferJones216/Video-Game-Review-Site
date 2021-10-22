@@ -5,7 +5,7 @@
 }
 
 <head>
-    <link rel="stylesheet" href="~/css/Views/Review/Delete.css" />
+    <link rel="stylesheet" href="~/css/Views/Review/Edit.css" />
 </head>
 
 <h1>Edit</h1>
@@ -23,8 +23,10 @@
                 <span asp-validation-for="Rating" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Usercomment" class="control-label"></label>
-                <input asp-for="Usercomment" class="form-control" />
+                @*<label asp-for="Usercomment" class="control-label"></label>*@
+                @*<input asp-for="Usercomment" class="form-control" Wrap="True" style="width:100%; height:200;"/>*@
+
+                <textarea id="usercomment" rows="8" cols="50" asp-for="Usercomment" class="form-control" />@Model.Usercomment</textarea>
                 <span asp-validation-for="Usercomment" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -40,9 +42,7 @@
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
