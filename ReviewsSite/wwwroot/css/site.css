@@ -15,12 +15,16 @@
     padding: 0;
     box-sizing: border-box;
     margin: 0;
+    padding-bottom: 3em;
 }
 
 html {
     font-size: 16px;
-    background-color: var(--accent-background);
     margin-top: 3rem;
+    background-image: url("images/img8.gif");
+    background-attachment: fixed;
+    background-position: left;
+    background-size: cover;
 }
 
 p {
