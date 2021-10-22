@@ -24,15 +24,31 @@ h1{
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 1em;
     width: 50%;
     text-align: center;
-    background-color: var(--accent-light);
+    background-color: var(--main-color);
+    color: var(--text-light);
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+#delete thead tr td {
+    font-family: var(--main-font), sans-serif;
+    padding: 0.5em;
+}
+
+#delete thead tr th h3 {
+    color: var(--accent-dark);
 }
 
 #DeleteLink a {
+    font-family: var(--header-font);
+    font-weight: bold;
+    padding: .5em;
     font-size: 20px;
     text-decoration: none;
-    color: var(--main-color);
+    color: var(--accent-dark);
 }
 
 #DeleteLink a:hover {
