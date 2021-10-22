@@ -8,6 +8,10 @@
     --text-light: #BED3AB;
 }
 
+html{
+    background-color: var(--accent-background);
+}
+
 table {
     margin-left: 5em;
     margin-right: 5em;
