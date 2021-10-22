@@ -8,6 +8,15 @@
     --text-light: #BED3AB;
 }
 
+body {
+    font-size: 16px;
+    margin-top: 3rem;
+    background-image: url("/css/images/img8.gif");
+    background-attachment: fixed;
+    background-position: left;
+    background-size: cover;
+}
+
 table {
     background: var(--main-color);
     margin-left: auto;
@@ -54,4 +63,10 @@ table tbody tr #gameCover {
 
 h1 {
     padding-bottom: 1em;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    margin: 1em
 }
