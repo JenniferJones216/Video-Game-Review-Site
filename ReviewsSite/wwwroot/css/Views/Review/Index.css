@@ -50,13 +50,30 @@ table tbody tr #username {
     text-align: center;
 }
 
-table tbody tr #EditDeleteLinks a {
+table tbody tr #EditLink a {
     color: var(--text-light);
     text-decoration: none;
+    font-family: var(--main-font), sans-serif;
+    padding: 1em;
 }
 
-table tbody tr #EditDeleteLinks a:hover {
+table tbody tr #DeleteLink a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-family: var(--main-font), sans-serif;
+    padding: 1em;
+}
+
+table tbody tr #EditLink a:hover {
     color: var(--accent-dark);
     text-decoration: none;
-    background-color: var(--accent-background)
+    background-color: var(--accent-background);
+    border-radius: 5px;
+}
+
+table tbody tr #DeleteLink a:hover {
+    color: var(--accent-dark);
+    text-decoration: none;
+    background-color: var(--accent-background);
+    border-radius: 5px;
 }

@@ -85,6 +85,7 @@ div > dl > dt > a {
 .NewReview a:hover {
     background-color: var(--accent-light);
     color: var(--text-light);
+    border-radius: 10px;
 }
 
 
@@ -125,6 +126,7 @@ div table tbody tr td a:visited {
 
 div table tbody tr td a:hover {
     background: var(--accent-light);
+    border-radius: 10px;
 }
 
 div table tbody tr #rating {

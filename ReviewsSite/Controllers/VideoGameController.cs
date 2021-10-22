@@ -32,9 +32,5 @@ namespace ReviewsSite.Controllers
         {
             return View(videoGameRepo.GetByID(id));
         }
-        public IActionResult Create()
-        {
-            return View(new VideoGame());
-        }
     }
 }

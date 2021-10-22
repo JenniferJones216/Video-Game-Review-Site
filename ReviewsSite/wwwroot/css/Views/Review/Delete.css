@@ -31,6 +31,12 @@ h1{
     color: var(--text-light);
     padding-top: 1em;
     padding-bottom: 1em;
+    border-style: groove;
+    border-width: 2px;
+    border-color: var(--accent-dark);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
 }
 
 #delete thead tr td {
@@ -54,6 +60,7 @@ h1{
 #DeleteLink a:hover {
     background-color: var(--accent-light);
     color: var(--text-light);
+    border-radius: 10px;
 }
 
 

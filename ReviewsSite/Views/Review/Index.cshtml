@@ -41,9 +41,11 @@
             <td id="review">
                 @item.Usercomment
             </td>
-            <td id="EditDeleteLinks">
-                <a asp-controller="Review" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-controller="Review" asp-action="ConfirmDelete" asp-route-id="@item.Id">Delete</a>
+            <td id="EditLink">
+                <a asp-controller="Review" asp-action="Edit" asp-route-id="@item.Id" id="editlink">Edit</a>
+            </td>
+            <td id="DeleteLink">
+             <a asp-controller="Review" asp-action="ConfirmDelete" asp-route-id="@item.Id" id="deletelink">Delete</a>
             </td>
         </tr>
 }

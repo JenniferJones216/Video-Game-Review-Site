@@ -22,6 +22,11 @@ table {
     margin-left: auto;
     margin-right: auto;
     color: var(--text-light);
+    border-style: groove;
+    border-width: 2px;
+    border-color: var(--accent-dark);
+    border-radius: 5px;
+    padding-bottom: 3em;
 }
 
 table > thead > tr > th > h3 {
@@ -54,6 +59,7 @@ table > tbody > tr > td > a:visited {
 
 table > tbody > tr > td > a:hover {
     background: var(--accent-light);
+    border-radius: 10px;
 }
 
 table tbody tr #gameCover {
