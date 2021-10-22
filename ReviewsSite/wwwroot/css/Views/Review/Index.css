@@ -45,3 +45,14 @@ table tbody tr #videoGameName {
 table tbody tr #username {
     text-align: center;
 }
+
+table tbody tr #EditDeleteLinks a {
+    color: var(--text-light);
+    text-decoration: none;
+}
+
+table tbody tr #EditDeleteLinks a:hover {
+    color: var(--accent-dark);
+    text-decoration: none;
+    background-color: var(--accent-background)
+}
