@@ -24,7 +24,6 @@ namespace ReviewsSite
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // the platform table HAS this data already in it
             modelBuilder.Entity<Platform>().HasData(
                 new Platform() { Id = 1, Name = "PC" },
                 new Platform() { Id = 2, Name = "Xbox" },
