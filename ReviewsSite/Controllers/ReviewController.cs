@@ -57,7 +57,6 @@ namespace ReviewsSite.Controllers
         {
             ViewBag.Ratings = Ratings;
             reviewRepo.Update(review);
-            //return RedirectToAction("Details", "VideoGame", new { id = review.VideoGameId });
             return Redirect(TempData["ReturnUrl"].ToString());
         }
 

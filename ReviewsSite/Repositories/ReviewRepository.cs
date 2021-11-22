@@ -27,7 +27,6 @@ namespace ReviewsSite.Repositories
 
         public IEnumerable<Review> GetByGameId(int id)
         {
-            //does this work?
             return db.Reviews.Where(r => r.Id == id);
         }
 
