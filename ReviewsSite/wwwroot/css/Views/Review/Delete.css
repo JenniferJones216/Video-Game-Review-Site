@@ -1,0 +1,67 @@
+﻿:root {
+    --main-color: #016236; /*forest green*/
+    --accent-dark: #06040A; /*blue-black*/
+    --accent-light: #02894B; /*emerald green*/
+    --accent-background: #BED3AB; /*seafoam green*/
+    --main-font: 'Inconsolata';
+    --header-font: 'DotGothic16';
+    --text-light: #BED3AB;
+}
+
+html {
+    background-color: var(--accent-background);
+}
+
+h1{
+    font-family: 'Inconsolata';
+}
+
+#videoGameName, #username, #rating, #review, h2 {
+    padding-bottom: 1em;
+}
+
+#delete {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    width: 50%;
+    text-align: center;
+    background-color: var(--main-color);
+    color: var(--text-light);
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-style: groove;
+    border-width: 2px;
+    border-color: var(--accent-dark);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+#delete thead tr td {
+    font-family: var(--main-font), sans-serif;
+    padding: 0.5em;
+}
+
+#delete thead tr th h3 {
+    color: var(--accent-dark);
+}
+
+#DeleteLink a {
+    font-family: var(--header-font);
+    font-weight: bold;
+    padding: .5em;
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--accent-dark);
+}
+
+#DeleteLink a:hover {
+    background-color: var(--accent-light);
+    color: var(--text-light);
+    border-radius: 10px;
+}
+
+
+

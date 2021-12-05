@@ -1,0 +1,78 @@
+﻿:root {
+    --main-color: #016236; /*forest green*/
+    --accent-dark: #06040A; /*blue-black*/
+    --accent-light: #02894B; /*emerald green*/
+    --accent-background: #BED3AB; /*seafoam green*/
+    --main-font: 'Inconsolata';
+    --header-font: 'DotGothic16';
+    --text-light: #BED3AB;
+}
+
+body {
+    font-size: 16px;
+    margin-top: 3rem;
+    background-image: url("/css/images/img8.gif");
+    background-attachment: fixed;
+    background-position: left;
+    background-size: cover;
+}
+
+table {
+    background: var(--main-color);
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--text-light);
+    border-style: groove;
+    border-width: 2px;
+    border-color: var(--accent-dark);
+    border-radius: 5px;
+    padding-bottom: 3em;
+}
+
+table > thead > tr > th > h3 {
+    color:var(--accent-dark);
+    font-family: var(--header-font), Tahoma, sans-serif;
+    /*font-size: 18px;*/
+    padding: 1em;
+    display:flex;
+    justify-content:space-around;
+}
+
+table > tbody > tr > td {
+    font-family: var(--main-font), Verdana, sans-serif;
+    font-size: 14px;
+    color: var(--text-light);
+    text-align: center;
+}
+
+table > tbody > tr > td > a {
+    color: var(--text-light);
+    font-family: var(--main-font), Tahoma, sans-serif;
+    text-decoration: none;
+    padding: 2em;
+    font-size: 14px;
+}
+
+table > tbody > tr > td > a:visited {
+    color: var(--text-light);
+}
+
+table > tbody > tr > td > a:hover {
+    background: var(--accent-light);
+    border-radius: 10px;
+}
+
+table tbody tr #gameCover {
+    padding-right: 2em;
+    padding-bottom: 1em;
+}
+
+h1 {
+    padding-bottom: 1em;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    margin: 1em
+}

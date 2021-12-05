@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel = "stylesheet" href="~/css/site.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DotGothic16"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata"/>
+    @RenderSection("Styles", required:false)
+</head>
+<header>
+    <nav style="background-color: black; justify-content: center; width: 100%; display: flex; flex-flow: row; position:fixed; top:0; left:0">
+        <a href="/VideoGame/Index" style="padding: .5em 1em; text-decoration:none; color: white"> Video Games </a>
+        <a href="/Review/Index" style="padding: .5em 1em; text-decoration:none; color: white"> All Reviews </a>
+    </nav>
+</header>
+<body>
+    <div>
+        @RenderBody()
+    </div>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

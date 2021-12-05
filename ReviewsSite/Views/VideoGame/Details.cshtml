@@ -1,0 +1,84 @@
+@model ReviewsSite.Models.VideoGame
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/Views/VideoGame/Details.css" />
+</head>
+
+<div id="details">
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt>
+            Platforms
+        </dt>
+        <dd>
+            <section>
+                @foreach (var platform in Model.Platforms)
+                {
+                    <p>@platform.Platform.Name</p>
+                }
+            </section>
+        </dd>
+        <dt class="col-sm-2">
+            @*<video src=@Model.VideoURL>Sorry your browser doesn't support this video</video>*@
+            <iframe width="560" height="315" src="@Model.VideoURL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </dt>
+        @*<dt>
+            
+        </dt>*@
+    </dl>
+</div>
+
+<div class="NewReview">
+    <a asp-controller="Review" asp-action="Create" asp-route-id="@Model.Id">Write a New Review</a>
+</div>
+
+
+
+<div id="reviews">
+    @foreach (var item in Model.Reviews)
+    {
+        <table id="review">
+            <tbody>
+               
+                <tr>
+                    <td id="rating">
+                        Rating: @Html.DisplayFor(modelItem => item.Rating)
+                    </td>
+                </tr>
+                <tr>
+                    <td id="userComment">
+                        @Html.DisplayFor(modelItem => item.Usercomment)
+                    </td>
+                </tr>
+                <tr>
+                    <td id="username">
+                        @Html.DisplayFor(modelItem => item.Username)
+                    </td>
+                </tr>
+                <tr>
+                    <td id="actions">
+                        <a asp-controller="Review" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a asp-controller="Review" asp-action="ConfirmDelete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    }
+</div>
+

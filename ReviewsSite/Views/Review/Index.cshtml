@@ -1,0 +1,53 @@
+﻿@model IEnumerable<ReviewsSite.Models.Review>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/Views/Review/Index.css" />
+</head>
+<table class="table" id="ReviewTable">
+    <thead>
+        <tr>
+            <th>
+                <h3> Game </h3>
+            </th>
+            <th>
+                <h3> Rating </h3>
+            </th>
+            <th>
+                <h3> Username </h3>
+            </th>
+            <th>
+                <h3> Review </h3>
+            </th>
+            <th>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td id="videoGameName">
+                @item.VideoGame.Name
+            </td>
+            <td id="rating">
+                @item.Rating
+            </td>
+            <td id="username">
+                @item.Username
+            </td>
+            <td id="review">
+                @item.Usercomment
+            </td>
+            <td id="EditLink">
+                <a asp-controller="Review" asp-action="Edit" asp-route-id="@item.Id" id="editlink">Edit</a>
+            </td>
+            <td id="DeleteLink">
+             <a asp-controller="Review" asp-action="ConfirmDelete" asp-route-id="@item.Id" id="deletelink">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

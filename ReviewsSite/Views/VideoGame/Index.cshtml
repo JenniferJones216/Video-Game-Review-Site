@@ -1,0 +1,61 @@
+﻿@model IEnumerable<ReviewsSite.Models.VideoGame>
+
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DotGothic16" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata" />
+</head>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@section Styles{ 
+    <link rel="stylesheet" href="~/css/Views/VideoGame/Index.css"/>
+}
+
+<h1>WELCOME TO GAMES REVIEW</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <h3>Video Game</h3>
+            </th>
+            <th>
+                <h3>Release Date</h3>
+            </th>
+            <th>
+                <h3>Average Rating</h3>
+            </th>
+            <th>
+                <p>
+                </p>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                <a href="/VideoGame/Details/@item.Id">
+                    @Html.DisplayFor(modelItem => item.Name)
+                </a>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReleaseDate)
+            </td>
+            <td>
+                @item.AverageRating
+            </td>
+            <td id="gameCover">
+                <img src=@item.PictureURL width=50px>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+<footer>
+    &copy; 2021 Screaming FireHawks
+</footer>
